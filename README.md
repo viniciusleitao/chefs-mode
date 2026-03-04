@@ -19,7 +19,7 @@ Best results on sites that use standard recipe markup (Schema.org `Recipe` or `i
 
 1. Clone or download this repo:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/chefs-mode.git
+   git clone https://github.com/viniciusleitao/chefs-mode.git
    ```
 2. Open Chrome and go to `chrome://extensions`.
 3. Turn on **Developer mode** (top right).
@@ -32,6 +32,14 @@ Best results on sites that use standard recipe markup (Schema.org `Recipe` or `i
 2. Click the **Chef's Mode** icon in the toolbar.
 3. The page dims and the recipe overlay appears with title, meta (serves, prep/cook/total time), image, ingredients, and method.
 4. To close: click the **×** in the top-right, press **Esc**, or click the extension icon again.
+
+## Features
+
+- **Centered, readable layout** — 1200px max width, two-column section for ingredients (2/5) and method (3/5).
+- **Dark overlay** — 97% black background; page behind is scroll-locked so you only scroll the recipe.
+- **Typography** — Roboto Mono for body text, Google Sans for the close and check symbols.
+- **Checkboxes** — Tick off ingredients as you use them.
+- **Isolated styling** — Overlay is rendered in a Shadow DOM so site CSS doesn’t override fonts or layout.
 
 ## Project structure
 
