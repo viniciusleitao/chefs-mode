@@ -18,7 +18,7 @@
       :host .chefs-mode-backdrop {
         position: absolute;
         inset: 0;
-        background: rgba(34, 34, 34, 0.97);
+        background: rgba(34, 34, 34, 0.98);
       }
 
       :host .chefs-mode-shell {
@@ -54,10 +54,8 @@
       :host .chefs-mode-title-block {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 16px;
         flex: 1;
-        align-items: center;
-        text-align: center;
       }
 
       :host .chefs-mode-title {
@@ -105,10 +103,9 @@
       :host .chefs-mode-meta {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 48px;
         font-size: 16px;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
         opacity: 0.86;
       }
@@ -116,7 +113,6 @@
       :host .chefs-mode-meta-item {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 2px;
       }
 
@@ -127,6 +123,7 @@
 
       :host .chefs-mode-meta-value {
         font-size: 13px;
+        font-weight: 400;
       }
 
       :host .chefs-mode-hero {
@@ -135,11 +132,11 @@
       }
 
       :host .chefs-mode-hero-inner {
-        border-radius: 12px;
+        border-radius: 4px;
         overflow: hidden;
         background: #111;
-        max-width: 620px;
-        max-height: 280px;
+        max-width: 1200x;
+        max-height: 400px;
         width: 100%;
       }
 
@@ -173,7 +170,8 @@
       :host .chefs-mode-ingredients h2,
       :host .chefs-mode-steps h2 {
         font-size: 13px;
-        letter-spacing: 0.22em;
+        letter-spacing: 0.2em;
+        font-weight: 400;
         text-transform: uppercase;
         margin: 0 0 10px;
         color: rgba(255, 255, 255, 0.7);
@@ -221,7 +219,7 @@
       :host .chefs-mode-ingredient {
         display: flex;
         align-items: flex-start;
-        gap: 10px;
+        gap: 16px;
         cursor: pointer;
         position: relative;
       }
@@ -779,6 +777,15 @@
       <div class="chefs-mode-backdrop"></div>
       <div class="chefs-mode-shell">
         <div class="chefs-mode-card">
+          ${
+            recipe.image
+              ? `<div class="chefs-mode-hero">
+                  <div class="chefs-mode-hero-inner">
+                    <img src="${encodeURI(recipe.image)}" alt="Recipe image" />
+                  </div>
+                </div>`
+              : ""
+          }
           <header class="chefs-mode-header">
             <div class="chefs-mode-title-block">
               <h1 class="chefs-mode-title">${safeText(recipe.title || "Recipe")}</h1>
@@ -823,15 +830,6 @@
             </div>
             <button class="chefs-mode-close" aria-label="Close Chef's Mode"><span class="chefs-mode-close-icon" aria-hidden="true">×</span></button>
           </header>
-          ${
-            recipe.image
-              ? `<div class="chefs-mode-hero">
-                  <div class="chefs-mode-hero-inner">
-                    <img src="${encodeURI(recipe.image)}" alt="Recipe image" />
-                  </div>
-                </div>`
-              : ""
-          }
           <main class="chefs-mode-main">
             <section class="chefs-mode-ingredients">
               <h2>INGREDIENTS</h2>

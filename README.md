@@ -11,7 +11,7 @@ Recipe sites are full of filler. Chef's Mode:
 - **Reads the recipe** from the page using Schema.org data when available, or by finding common patterns (ingredients list, instructions, main image).
 - **Opens a full-screen overlay** with a dark, high-contrast layout so you can read from a distance while cooking.
 - **Lets you tick off ingredients** with checkboxes as you go.
-- **Runs entirely in your browser**, no data is sent to any server.
+- **Runs entirely in your browser**—no data is sent to any server.
 
 Best results on sites that use standard recipe markup (Schema.org `Recipe` or `itemprop` attributes). On other sites it falls back to heuristics and may miss some content.
 
@@ -30,8 +30,16 @@ Best results on sites that use standard recipe markup (Schema.org `Recipe` or `i
 
 1. Open any recipe page in Chrome.
 2. Click the **Chef's Mode** icon in the toolbar.
-3. The page dims, and the recipe overlay appears with title, meta (serves, prep/cook/total time), image, ingredients, and method.
+3. The page dims and the recipe overlay appears with title, meta (serves, prep/cook/total time), image, ingredients, and method.
 4. To close: click the **×** in the top-right, press **Esc**, or click the extension icon again.
+
+## Features
+
+- **Centered, readable layout** — 1200px max width, two-column section for ingredients (2/5) and method (3/5).
+- **Dark overlay** — 97% black background; page behind is scroll-locked so you only scroll the recipe.
+- **Typography** — Roboto Mono for body text, Google Sans for the close and check symbols.
+- **Checkboxes** — Tick off ingredients as you use them.
+- **Isolated styling** — Overlay is rendered in a Shadow DOM so site CSS doesn’t override fonts or layout.
 
 ## Project structure
 
